@@ -2,30 +2,95 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MINKA - Marketplace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-
-  <header class="header">
-    <h1>MINKA Marketplace</h1>
-    <nav>
-      <a href="index.html">Inicio</a>
-      <a href="login.html">Iniciar Sesión</a>
-      <a href="carrito.html">Carrito</a>
-    </nav>
+  <!-- Header -->
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="logo">
+        <span>MINKA</span>
+        <span class="logo-badge">Marketplace</span>
+      </a>
+      
+      <nav class="nav-desktop">
+        <a href="index.html" class="nav-link active">Inicio</a>
+        <a href="#categorias" class="nav-link">Categorías</a>
+        <a href="#productos" class="nav-link">Productos</a>
+        <a href="login.html" class="nav-link">Vender</a>
+      </nav>
+      
+      <div class="header-icons">
+        <a href="login.html" class="icon-button">👤</a>
+        <a href="carrito.html" class="icon-button cart-icon">
+          🛒
+          <span class="cart-counter">0</span>
+        </a>
+        <button class="mobile-menu-button" id="mobile-menu-button">☰</button>
+      </div>
+    </div>
+    
+    <!-- Menú móvil (oculto por defecto) -->
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html" class="mobile-link active">Inicio</a>
+      <a href="#categorias" class="mobile-link">Categorías</a>
+      <a href="#productos" class="mobile-link">Productos</a>
+      <a href="login.html" class="mobile-link">Vender</a>
+      <a href="login.html" class="mobile-link">Ingresar</a>
+    </div>
   </header>
 
-  <main class="contenedor">
-    <h2>Productos destacados</h2>
-    <div id="productos-container" class="productos-grid">
-      <!-- Productos aparecerán aquí -->
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Compra y vende con confianza</h1>
+        <p>Encuentra los mejores productos en nuestra plataforma segura.</p>
+        <div class="hero-buttons">
+          <a href="#productos" class="btn btn-primary">Explorar</a>
+          <a href="login.html" class="btn btn-secondary">Vender ahora</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="../assets/img/hero-image.png" alt="MINKA Marketplace">
+      </div>
+    </div>
+  </section>
+
+  <!-- Productos -->
+  <main class="products-section" id="productos">
+    <div class="section-header">
+      <h2 class="section-title">Productos destacados</h2>
+      <a href="#" class="view-all">Ver todos</a>
+    </div>
+    
+    <div class="products-grid">
+      <!-- Producto 1 -->
+      <div class="product-card">
+        <div class="product-badge">Nuevo</div>
+        <div class="product-image-container">
+          <img src="../assets/img/producto1.jpg" alt="Producto" class="product-image">
+        </div>
+        <div class="product-details">
+          <h3 class="product-title">Zapatos Deportivos</h3>
+          <div class="product-price">$59.99</div>
+          <div class="product-rating">★★★★☆ (24)</div>
+          <button class="btn-add-to-cart">Añadir al carrito</button>
+        </div>
+      </div>
+      
+      <!-- Más productos... -->
     </div>
   </main>
 
-  <footer class="footer">
-    <p>&copy; 2025 MINKA - Todos los derechos reservados.</p>
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>&copy; 2025 MINKA - Todos los derechos reservados</p>
+    </div>
   </footer>
 
   <script src="../assets/js/main.js"></script>
