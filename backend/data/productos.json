@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop HP",
+    "precio": 1500,
+    "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfdSFFyoRzEKxGY8ogMRwMpH2RmifQQinkOw&s"
+  },
+  {
+    "id": 2,
+    "nombre": "Mouse inalámbrico",
+    "precio": 30,
+    "imagen": "https://sofmat.com.bo/wp-content/uploads/2024/04/Mouse-Inalambrico-Recargable.jpg"
+  }
+]
