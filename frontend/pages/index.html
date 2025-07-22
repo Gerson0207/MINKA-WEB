@@ -1,98 +1,102 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MINKA - Marketplace</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/estilos.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MarketPlace - Inicio</title>
+    <link rel="stylesheet" href="../assets/css/estilos.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="header-container">
-      <a href="index.html" class="logo">
-        <span>MINKA</span>
-        <span class="logo-badge">Marketplace</span>
-      </a>
-      
-      <nav class="nav-desktop">
-        <a href="index.html" class="nav-link active">Inicio</a>
-        <a href="#categorias" class="nav-link">Categorías</a>
-        <a href="#productos" class="nav-link">Productos</a>
-        <a href="login.html" class="nav-link">Vender</a>
-      </nav>
-      
-      <div class="header-icons">
-        <a href="login.html" class="icon-button">👤</a>
-        <a href="carrito.html" class="icon-button cart-icon">
-          🛒
-          <span class="cart-counter">0</span>
-        </a>
-        <button class="mobile-menu-button" id="mobile-menu-button">☰</button>
-      </div>
-    </div>
+    <!-- Header -->
+    <!--#include virtual="../components/header.html" -->
     
-    <!-- Menú móvil (oculto por defecto) -->
-    <div class="mobile-menu" id="mobile-menu">
-      <a href="index.html" class="mobile-link active">Inicio</a>
-      <a href="#categorias" class="mobile-link">Categorías</a>
-      <a href="#productos" class="mobile-link">Productos</a>
-      <a href="login.html" class="mobile-link">Vender</a>
-      <a href="login.html" class="mobile-link">Ingresar</a>
-    </div>
-  </header>
-
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <div class="hero-text">
-        <h1>Compra y vende con confianza</h1>
-        <p>Encuentra los mejores productos en nuestra plataforma segura.</p>
-        <div class="hero-buttons">
-          <a href="#productos" class="btn btn-primary">Explorar</a>
-          <a href="login.html" class="btn btn-secondary">Vender ahora</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <img src="../assets/img/hero-image.png" alt="MINKA Marketplace">
-      </div>
-    </div>
-  </section>
-
-  <!-- Productos -->
-  <main class="products-section" id="productos">
-    <div class="section-header">
-      <h2 class="section-title">Productos destacados</h2>
-      <a href="#" class="view-all">Ver todos</a>
-    </div>
+    <main class="container">
+        <section style="margin: 2rem 0;">
+            <h2 style="margin-bottom: 1rem;">Productos Destacados</h2>
+            <div class="product-grid">
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 1" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 1</h3>
+                        <p class="product-price">$19.99</p>
+                        <p>Descripción breve del producto 1.</p>
+                        <a href="producto.html?id=1" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="1" data-name="Producto 1" data-price="19.99" style="margin-top: 10px;">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 2" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 2</h3>
+                        <p class="product-price">$29.99</p>
+                        <p>Descripción breve del producto 2.</p>
+                        <a href="producto.html?id=2" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="2" data-name="Producto 2" data-price="29.99" style="margin-top: 10px;">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 3" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 3</h3>
+                        <p class="product-price">$39.99</p>
+                        <p>Descripción breve del producto 3.</p>
+                        <a href="producto.html?id=3" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="3" data-name="Producto 3" data-price="39.99" style="margin-top: 10px;">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 4" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 4</h3>
+                        <p class="product-price">$49.99</p>
+                        <p>Descripción breve del producto 4.</p>
+                        <a href="producto.html?id=4" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="4" data-name="Producto 4" data-price="49.99" style="margin-top: 10px;">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section style="margin: 2rem 0;">
+            <h2 style="margin-bottom: 1rem;">Ofertas Especiales</h2>
+            <div class="product-grid">
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 5" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 5</h3>
+                        <p class="product-price"><span style="text-decoration: line-through; color: #999; margin-right: 10px;">$59.99</span> $49.99</p>
+                        <p>Descripción breve del producto 5.</p>
+                        <a href="producto.html?id=5" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="5" data-name="Producto 5" data-price="49.99" style="margin-top: 10px; background: #e74c3c;">Agregar al carrito</button>
+                    </div>
+                </div>
+                
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300" alt="Producto 6" class="product-image">
+                    <div class="product-info">
+                        <h3>Producto 6</h3>
+                        <p class="product-price"><span style="text-decoration: line-through; color: #999; margin-right: 10px;">$69.99</span> $59.99</p>
+                        <p>Descripción breve del producto 6.</p>
+                        <a href="producto.html?id=6" class="btn" style="margin-top: 10px; display: inline-block;">Ver detalles</a>
+                        <button class="btn add-to-cart" data-id="6" data-name="Producto 6" data-price="59.99" style="margin-top: 10px; background: #e74c3c;">Agregar al carrito</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
     
-    <div class="products-grid">
-      <!-- Producto 1 -->
-      <div class="product-card">
-        <div class="product-badge">Nuevo</div>
-        <div class="product-image-container">
-          <img src="../assets/img/producto1.jpg" alt="Producto" class="product-image">
-        </div>
-        <div class="product-details">
-          <h3 class="product-title">Zapatos Deportivos</h3>
-          <div class="product-price">$59.99</div>
-          <div class="product-rating">★★★★☆ (24)</div>
-          <button class="btn-add-to-cart">Añadir al carrito</button>
-        </div>
-      </div>
-      
-      <!-- Más productos... -->
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-container">
-      <p>&copy; 2025 MINKA - Todos los derechos reservados</p>
-    </div>
-  </footer>
-
-  <script src="../assets/js/main.js"></script>
+    <!-- Footer -->
+    <!--#include virtual="../components/footer.html" -->
+    
+    <script src="../assets/js/main.js"></script>
 </body>
 </html>
