@@ -1,4 +1,4 @@
-const Producto = require('../models/Producto');
+const Producto = require('../models/producto');
 
 exports.getProductos = async (req, res) => {
   try {
@@ -20,4 +20,36 @@ exports.createProducto = async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: 'Error al crear producto' });
   }
+};
+
+exports.getProductoById = async (req, res) => {
+  try {
+    const producto = await Producto.getById(req.params.id);
+    if (!producto) {
+      return res.status(404).json({ error: 'Producto no encontrado' });
+    }
+    res.json(producto);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al buscar producto' });
+  }
+
+  exports.getCarrito = async (req, res) => {
+  try {
+    const carrito = await Carrito.getAll();
+    const productos = await Producto.getAll(); // Asegúrate de importar el modelo Producto
+    
+    const carritoConDetalles = carrito.map(item => {
+      const producto = productos.find(p => p.id == item.productoId);
+      return {
+        ...item,
+        nombre: producto?.nombre || 'Producto eliminado',
+        precio: producto?.precio || 0
+      };
+    });
+    
+    res.json(carritoConDetalles);
+  } catch (error) {
+    res.status(500).json({ error: 'Error al obtener carrito' });
+  }
+};
 };
