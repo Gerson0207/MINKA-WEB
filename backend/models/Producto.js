@@ -16,6 +16,12 @@ class Producto {
     fs.writeFileSync(dataPath, JSON.stringify(productos, null, 2));
     return nuevoProducto;
   }
+
+  static async getById(id) {
+  const productos = await this.getAll();
+  return productos.find(p => p.id == id);
 }
+}
+router.get('/:id', getProductoById);
 
 module.exports = Producto;

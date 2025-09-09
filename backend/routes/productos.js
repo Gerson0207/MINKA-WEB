@@ -1,19 +1,17 @@
-// routes/productos.js
 const express = require('express');
 const router = express.Router();
-const {
-  getProductos,
-  getProductoById,  // ¡Debe existir en el controller!
-  createProducto
+const { 
+  getProductos, 
+  getProductoById, 
+  createProducto, 
+  updateProducto, 
+  deleteProducto 
 } = require('../controllers/productosController');
 
-// Ruta GET (asegúrate de que getProductos esté definido)
-router.get('/', getProductos); 
-
-// Ruta GET por ID (si usas esta ruta, getProductoById debe existir)
-router.get('/:id', getProductoById); 
-
-// Ruta POST
-router.post('/', createProducto);
+router.get('/', getProductos);
+router.get('/:id', getProductoById);
+router.post('/', createProducto); 
+router.put('/:id', updateProducto);
+router.delete('/:id', deleteProducto);
 
 module.exports = router;
