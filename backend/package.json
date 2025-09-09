@@ -1,14 +1,19 @@
 {
-  "name": "backend",
+  "name": "minka-backend",
   "version": "1.0.0",
-  "main": "app.js",
+  "description": "Backend para MINKA-WEB",
+  "main": "aplicacion.js",
   "scripts": {
-    "start": "node app.js"
+    "start": "node aplicacion.js",
+    "dev": "nodemon aplicacion.js"
   },
   "dependencies": {
-    "bcryptjs": "^3.0.2",
+    "express": "^4.18.2",
     "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "jsonwebtoken": "^9.0.2"
+    "mongoose": "^7.5.0",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }
